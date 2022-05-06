@@ -40,8 +40,8 @@ describe('Cadastro', ()=> {
         cy.get('input[name="postalcode"]').type(entregador.endereco.cep)
         cy.get('input[type="button"][value="Buscar CEP"]').click()
 
-        cy.get('input[name = "adress-number"]').type(entregador.endereco.numero)
-        cy.get('input[name = "adress-details"]').type(entregador.endereco.complemento)
+        cy.get('input[name = "address-number"]').type(entregador.endereco.numero)
+        cy.get('input[name = "address-details"]').type(entregador.endereco.complemento)
         
         //Combinando CSS Selector com Texto
 
