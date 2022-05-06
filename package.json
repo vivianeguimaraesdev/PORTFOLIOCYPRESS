@@ -1,0 +1,22 @@
+{
+  "name": "projeto-teste",
+  "version": "1.0.0",
+  "description": "Projeto em cypress para portfólio",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vivianeguimaraesdev/ProjetoPr-tico-Cypress.git"
+  },
+  "author": "Vivianne Guimarães",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vivianeguimaraesdev/ProjetoPr-tico-Cypress/issues"
+  },
+  "homepage": "https://github.com/vivianeguimaraesdev/ProjetoPr-tico-Cypress#readme",
+  "devDependencies": {
+    "cypress": "^9.6.0"
+  }
+}
