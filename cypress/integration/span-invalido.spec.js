@@ -12,7 +12,7 @@ describe('Cadastro', ()=> {
         //Massa de teste
         var entregador = {
             nome: 'Fernando Papito',
-            cpf: '00000014141',
+            cpf: '00000014AA',
             email: 'papito@hotmail.com',
             whatsapp: '11999999999',
             endereco: {
@@ -24,7 +24,8 @@ describe('Cadastro', ()=> {
                 cidade_uf:'São Paulo/SP'
 
             },
-            metodo_entrega:'Moto'
+            metodo_entrega:'Moto',
+            cnh:'cnh-digital.jpg'
 
         }
 
@@ -42,12 +43,27 @@ describe('Cadastro', ()=> {
 
         cy.get('input[name = "address-number"]').type(entregador.endereco.numero)
         cy.get('input[name = "address-details"]').type(entregador.endereco.complemento)
+
+        //Confirmando a inserção de dados via CEP 
+
+        cy.get('input[name="address"]').should('have.value', entregador.endereco.rua)
+        cy.get('input[name="district"]').should('have.value', entregador.endereco.bairro)
+        cy.get('input[name="city-uf"]').should('have.value', entregador.endereco.cidade_uf)
         
         //Combinando CSS Selector com Texto
 
         cy.contains('.delivery-method li', entregador.metodo_entrega).click()
 
+        //Upload da imagem
 
-      
+        cy.get('input[accept^="image"]').attachFile('/images/' + entregador.cnh)
+
+        //Submissão do formulário
+
+        cy.get('form button [type="submit"]').click()
+
+        //Validando mensagem de erro no CPF
+
+        cy.get('.alert-error').should('have.text','Oops ! CPF inválido')
     })
 })
