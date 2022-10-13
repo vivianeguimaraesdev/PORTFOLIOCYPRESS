@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/vivianeguimaraesdev/ProjetoPr-tico-Cypress#readme",
   "devDependencies": {
-    "cypress": "^9.6.0",
+    "cypress": "^10.10.0",
     "cypress-file-upload": "^5.0.8",
     "faker": "^5.5.3",
     "gerador-validador-cpf": "^5.0.2"

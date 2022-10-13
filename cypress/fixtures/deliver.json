@@ -1,8 +1,8 @@
 {
     "signup": {
-        "name": "Fernando Papito",
+        "name": "Luis Teste",
         "cpf": "00000014141",
-        "email": "papito@hotmail.com",
+        "email": "umemailqualquer@hotmail.com",
         "whatsapp": "11999999999",
         "address": {
             "postalcode": "04534011",
@@ -32,9 +32,9 @@
         "cnh": "cnh-digital.jpg"
     },
     "email_inv": {
-        "name": "Fernando Papito",
+        "name": "Fernanda Maia",
         "cpf": "00000014141",
-        "email": "papito.com.br",
+        "email": "maiafer.com.br",
         "whatsapp": "11999999999",
         "address": {
             "postalcode": "04534011",

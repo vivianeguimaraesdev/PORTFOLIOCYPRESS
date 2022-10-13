@@ -1,5 +1,5 @@
 //Cadastro de Um Entregador - Formulário 
-//Contains você junta um localizador + texto
+
 
 describe('Cadastro', ()=> {
     it('Usuário deve se tornar um entregador', ()=>{
@@ -60,10 +60,7 @@ describe('Cadastro', ()=> {
 
         //Submissão do formulário
 
-        cy.get('form button [type="submit"]').click()
+        cy.click('.button-success')
 
-        //Validando mensagem de erro no CPF
-
-        cy.get('.alert-error').should('have.text','Oops ! CPF inválido')
     })
 })
